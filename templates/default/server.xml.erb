@@ -41,6 +41,10 @@
   <% end -%>
   <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
 
+  <% @listeners.each do |listener| %>
+    <Listener className="<%= listener %>" />
+  <% end %>
+
   <!-- Global JNDI resources
        Documentation at /docs/jndi-resources-howto.html
   -->
