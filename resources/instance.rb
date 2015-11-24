@@ -90,3 +90,5 @@ attribute :lib_dir,
   kind_of: String
 attribute :endorsed_dir,
   kind_of: String
+attribute :listeners,
+  kind_of: Array
