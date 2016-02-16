@@ -58,6 +58,7 @@ default['tomcat']['deploy_manager_packages'] = ["tomcat#{node['tomcat']['base_ve
 default['tomcat']['ajp_packetsize'] = '8192'
 default['tomcat']['uriencoding'] = 'UTF-8'
 default['tomcat']['listeners'] = []
+default['tomcat']['valves'] = []
 case node['platform_family']
 
 when 'rhel', 'fedora'

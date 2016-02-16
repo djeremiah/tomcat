@@ -40,9 +40,8 @@
   <Listener className="org.apache.catalina.mbeans.ServerLifecycleListener" />
   <% end -%>
   <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
-
   <% @listeners.each do |listener| %>
-    <Listener className="<%= listener %>" />
+  <Listener className="<%= listener %>" />
   <% end %>
 
   <!-- Global JNDI resources
@@ -185,6 +184,9 @@
             <% end -%>
             >
 
+        <% @valves.each do |valve| %>
+        <Valve className="<%= valve %>" />
+        <% end %>
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
         <!--

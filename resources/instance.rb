@@ -92,3 +92,5 @@ attribute :endorsed_dir,
   kind_of: String
 attribute :listeners,
   kind_of: Array
+attribute :valves,
+  kind_of: Array
